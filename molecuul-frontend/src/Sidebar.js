@@ -2,7 +2,7 @@ import React, {useEffect, useState}  from "react";
 import ElementTool from "./ElementTool";
 import "./Sidebar.css";
 import axios from "axios";
-const backendUrl = "https://shuffle-back-end.herokuapp.com/";
+const backendUrl = "molecuul-backend.herokuapp.com/";
 
 function Sidebar (props) {
     const [elements, setElements] = useState([]);
