@@ -2,6 +2,7 @@ import React, {useEffect, useState}  from "react";
 import ElementTool from "./ElementTool";
 import "./Sidebar.css";
 import axios from "axios";
+const backendUrl = "https://shuffle-back-end.herokuapp.com/";
 
 function Sidebar (props) {
     const [elements, setElements] = useState([]);
@@ -17,7 +18,7 @@ function Sidebar (props) {
 
      async function fetchAll(){
         try {
-           const response = await axios.get("http://localhost:5001/elements");
+           const response = await axios.get(backendUrl + "elements");
            return response.data.elements;     
         }
         catch (error){
