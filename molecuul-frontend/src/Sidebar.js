@@ -23,7 +23,7 @@ function Sidebar (props) {
         }
         catch (error){
            //We're not handling errors. Just logging into the console.
-           console.log(response)
+           console.log(response);
            console.log("error"); 
            return false;         
         }
