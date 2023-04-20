@@ -19,11 +19,11 @@ function Sidebar (props) {
      async function fetchAll(){
         try {
            const response = await axios.get(backendUrl + "elements");
-           console.log(response);
            return response.data.elements;     
         }
         catch (error){
            //We're not handling errors. Just logging into the console.
+           console.log(response)
            console.log("error"); 
            return false;         
         }
