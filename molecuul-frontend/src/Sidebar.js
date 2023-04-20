@@ -2,7 +2,6 @@ import React, {useEffect, useState}  from "react";
 import ElementTool from "./ElementTool";
 import "./Sidebar.css";
 import axios from "axios";
-const backendUrl = "molecuul-backend.herokuapp.com/";
 
 function Sidebar (props) {
     const [elements, setElements] = useState([]);
@@ -18,12 +17,11 @@ function Sidebar (props) {
 
      async function fetchAll(){
         try {
-           const response = await axios.get(backendUrl + "elements");
+           const response = await axios.get("https://molecuul-backend.herokuapp.com/elements");
            return response.data.elements;     
         }
         catch (error){
            //We're not handling errors. Just logging into the console.
-           console.log(response);
            console.log("error"); 
            return false;         
         }
